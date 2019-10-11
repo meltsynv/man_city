@@ -9,8 +9,9 @@ export const Tag = (props) => {
                 fontSize: props.size,
                 color: props.color,
                 padding: '5px 10px',
-                display:'inline-block',
-                fontFamily: 'Righteous'
+                display: 'inline-block',
+                fontFamily: 'Righteous',
+                ...props.add
             }}>
             {props.children}
         </div>
@@ -27,3 +28,24 @@ export const Tag = (props) => {
 }
 
 export default Tag
+
+export const firebaseLooper = (snapshot) => {
+    const data = [];
+    snapshot.forEach((childSnapshot) => {
+        data.push({
+            ...childSnapshot.val(),
+            id: childSnapshot.key
+        })
+    })
+    return data;
+}
+
+export const reverseArray = (actualArray) => {
+    let reversedArray = [];
+
+    for (let i = actualArray.length - 1; i >= 0; i--) {
+        reversedArray.push(actualArray[i]);
+    }
+
+    return reversedArray;
+}

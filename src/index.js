@@ -1,16 +1,17 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './Resources/css/app.css';
-import {BrowserRouter} from 'react-router-dom';
-import Routes from './routes';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./Resources/css/app.css";
+
+import { BrowserRouter } from "react-router-dom";
+import Routes from "./routes";
+import "./firebase";
 
 const App = () => {
-    return (
-        <BrowserRouter>
-            <Routes/>
-        </BrowserRouter>
-    )
-}
+  return (
+    <BrowserRouter>
+      <Routes />
+    </BrowserRouter>
+  );
+};
 
-ReactDOM.render(<App />, document.getElementById('root'));
-
+ReactDOM.render(<App />, document.getElementById("root"));
