@@ -18,7 +18,7 @@ class MeetPlayers extends Component {
                             <div className='home_card_wrapper'>
                                 <HomeCards show={this.state.show} />
                             </div>
-                            <div className='text_wrapper' style={{ paddingTop: '30px' }}>
+                            <div className='text_wrapper' style={{ paddingTop: '67px' }}>
                                 <div>
                                     <Tag bck='#0e1731' size='100px' color='#ffffff' add={{ display: 'inline-block', marginBottom: '20px' }}>
                                         Meet

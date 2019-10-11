@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import { easePolyOut } from 'd3-ease';
 import Animate from 'react-move/Animate';
-import Otamendi from '../../../Resources/images/players/Otamendi.png'
+import Otamendi from '../../../Resources/images/players/Otamendi.png';
+import PlayerCard from '../../ui/playerCard'
+
 class HomeCards extends Component {
     state = {
         show: this.props.show,
@@ -32,8 +34,8 @@ class HomeCards extends Component {
             >
                 {({ left, bottom }) => {
                     return (
-                        <div style={{ position: 'absolute', bottom, left, background: `url(${Otamendi})` }}>
-                            jhgf
+                        <div style={{ position: 'absolute', bottom, left }}>
+                            <PlayerCard number='30' name='Nicolas' lastname='Otamendi' bck={Otamendi} />
                         </div>
                     )
                 }}
